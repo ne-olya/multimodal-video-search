@@ -1,0 +1,23 @@
+seed: 42
+video_dir: data/videos
+output_dir: artifacts/default
+sampling:
+  strategy: uniform
+  frames: 24
+  scene_threshold: 0.35
+  segment_seconds: 15
+encoders:
+  visual: ViT-B-32
+  visual_weights: laion2b_s34b_b79k
+  text: shared_clip_text_tower
+asr:
+  enabled: true
+  model: small
+  language: null
+ocr:
+  enabled: true
+  languages: [ru, en]
+fusion:
+  visual: 0.55
+  speech: 0.30
+  ocr: 0.15
