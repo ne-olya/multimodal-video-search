@@ -1,0 +1,12 @@
+slices:
+  action:
+    description: Действие различимо преимущественно визуально
+  spoken_fact:
+    description: Ответ содержится в распознанной речи
+  on_screen_text:
+    description: Релевантность определяется надписью или титрами
+  temporal_event:
+    description: Короткое событие внутри длинного ролика
+  multilingual:
+    description: Язык запроса отличается от части видеоконтента
+
