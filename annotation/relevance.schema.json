@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VideoScope relevance judgment",
+  "type": "object",
+  "required": ["query_id", "query", "video_id", "relevance"],
+  "properties": {
+    "query_id": {"type": "string"},
+    "query": {"type": "string", "minLength": 3},
+    "video_id": {"type": "string"},
+    "relevance": {"type": "integer", "minimum": 0, "maximum": 3},
+    "evidence_start": {"type": ["number", "null"], "minimum": 0},
+    "evidence_end": {"type": ["number", "null"], "minimum": 0},
+    "modality": {"enum": ["visual", "speech", "ocr", "mixed"]},
+    "annotator": {"type": "string"}
+  }
+}
